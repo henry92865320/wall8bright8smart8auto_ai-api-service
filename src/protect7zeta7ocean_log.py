@@ -190,3 +190,26 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-04-11 02:29:05
+# This is a random comment
+
+
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
