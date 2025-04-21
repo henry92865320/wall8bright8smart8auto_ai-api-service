@@ -394,3 +394,17 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-04-21 20:40:02
+# Improved performance
+# Added some random functionality
+
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return bool(re.match(pattern, email))
+
+def extract_phone_numbers(text):
+    pattern = r'\d{3}-\d{3}-\d{4}'
+    return re.findall(pattern, text)
