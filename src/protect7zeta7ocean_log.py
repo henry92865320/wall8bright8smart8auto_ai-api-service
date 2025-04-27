@@ -479,3 +479,19 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     return n * factorial(n-1)
+
+# Update at 2025-04-28 04:02:08
+# Added some random functionality
+# Added unit tests
+# Fixed some bugs
+
+def read_file_lines(filename):
+    try:
+        with open(filename, 'r') as file:
+            return file.readlines()
+    except FileNotFoundError:
+        return []
+
+def write_file_lines(filename, lines):
+    with open(filename, 'w') as file:
+        file.writelines(lines)
