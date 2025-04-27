@@ -470,3 +470,12 @@ def fetch_data(url):
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
+
+# Update at 2025-04-27 13:51:04
+# Added unit tests
+
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
