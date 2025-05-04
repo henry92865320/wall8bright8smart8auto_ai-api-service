@@ -575,3 +575,15 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-05-04 14:38:11
+# Added unit tests
+# Fixed some bugs
+
+
+def count_words(text):
+    words = text.split()
+    word_count = {}
+    for word in words:
+        word_count[word] = word_count.get(word, 0) + 1
+    return word_count
