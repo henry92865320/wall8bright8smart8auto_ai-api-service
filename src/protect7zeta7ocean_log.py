@@ -607,3 +607,17 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+
+# Update at 2025-05-06 21:39:04
+# Added error handling
+
+
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
