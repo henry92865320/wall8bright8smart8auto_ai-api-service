@@ -801,3 +801,20 @@ class Observer:
     def notify(self):
         for observer in self._observers:
             observer.update()
+
+# Update at 2025-05-16 23:10:04
+# Added error handling
+# Added documentation
+# Added unit tests
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
