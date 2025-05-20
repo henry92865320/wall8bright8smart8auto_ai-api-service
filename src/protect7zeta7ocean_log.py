@@ -886,3 +886,20 @@ def count_words(text):
     for word in words:
         word_count[word] = word_count.get(word, 0) + 1
     return word_count
+
+# Update at 2025-05-21 03:02:06
+# Fixed some bugs
+# Refactored the code
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+    
+    def is_empty(self):
+        return len(self.items) == 0
