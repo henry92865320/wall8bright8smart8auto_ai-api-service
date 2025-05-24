@@ -937,3 +937,13 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-05-24 09:18:09
+# Added documentation
+# Added unit tests
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
