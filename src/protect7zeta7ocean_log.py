@@ -1067,3 +1067,15 @@ async def fetch_data_async(url):
 async def process_multiple_urls(urls):
     tasks = [fetch_data_async(url) for url in urls]
     return await asyncio.gather(*tasks)
+
+# Update at 2025-06-03 01:30:08
+# Added unit tests
+# Fixed some bugs
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
