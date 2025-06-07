@@ -1134,3 +1134,16 @@ def validate_email(email):
 def extract_phone_numbers(text):
     pattern = r'\d{3}-\d{3}-\d{4}'
     return re.findall(pattern, text)
+
+# Update at 2025-06-08 08:49:04
+# Updated the code with new features
+# Improved performance
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
