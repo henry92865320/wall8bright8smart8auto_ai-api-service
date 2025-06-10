@@ -1188,3 +1188,16 @@ def hash_password(password):
 
 def verify_password(password, hashed):
     return hash_password(password) == hashed
+
+# Update at 2025-06-10 21:31:10
+# Added documentation
+# Fixed some bugs
+# Added some random functionality
+
+
+def reverse_string(s):
+    return s[::-1]
+
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
