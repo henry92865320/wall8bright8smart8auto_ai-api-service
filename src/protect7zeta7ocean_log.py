@@ -1358,3 +1358,20 @@ def create_table(conn):
         conn.commit()
     except sqlite3.Error as e:
         print(e)
+
+# Update at 2025-06-21 20:38:11
+# This is a random comment
+# Fixed some bugs
+# Optimized the algorithm
+
+
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
