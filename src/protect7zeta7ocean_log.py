@@ -1493,3 +1493,15 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     return n * factorial(n-1)
+
+# Update at 2025-10-11 02:32:06
+# Refactored the code
+from datetime import datetime, timedelta
+
+def get_date_range(start_date, end_date):
+    date_list = []
+    current_date = start_date
+    while current_date <= end_date:
+        date_list.append(current_date)
+        current_date += timedelta(days=1)
+    return date_list
