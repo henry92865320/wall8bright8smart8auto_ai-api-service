@@ -1687,3 +1687,19 @@ def factorial(n):
     if n == 0 or n == 1:
         return 1
     return n * factorial(n-1)
+
+# Update at 2025-10-22 22:46:03
+# Added documentation
+class Stack:
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+    
+    def is_empty(self):
+        return len(self.items) == 0
