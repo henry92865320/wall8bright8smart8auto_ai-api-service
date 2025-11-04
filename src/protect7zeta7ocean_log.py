@@ -1739,3 +1739,18 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+
+# Update at 2025-11-04 09:45:04
+# Refactored the code
+
+
+import asyncio
+
+async def fetch_data_async(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.json()
+
+async def process_multiple_urls(urls):
+    tasks = [fetch_data_async(url) for url in urls]
+    return await asyncio.gather(*tasks)
