@@ -1810,3 +1810,11 @@ def read_file_lines(filename):
 def write_file_lines(filename, lines):
     with open(filename, 'w') as file:
         file.writelines(lines)
+
+# Update at 2025-11-26 04:19:03
+# Added error handling
+# This is a random comment
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
