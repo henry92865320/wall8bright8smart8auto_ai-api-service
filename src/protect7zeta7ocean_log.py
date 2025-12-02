@@ -1861,3 +1861,26 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-12-02 09:12:06
+# This is a random comment
+# Added unit tests
+
+class Singleton:
+    _instance = None
+    
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+class Observer:
+    def __init__(self):
+        self._observers = []
+    
+    def attach(self, observer):
+        self._observers.append(observer)
+    
+    def notify(self):
+        for observer in self._observers:
+            observer.update()
